@@ -643,6 +643,23 @@ Image options
 
   Image tooltip.
 
+- **key**
+
+  +-----------+--------------------------------------------+
+  | `Values`  | String                                     |
+  +-----------+--------------------------------------------+
+  | `Default` |                                            |
+  +-----------+--------------------------------------------+
+
+  Key value as used in :ref:`RichTextLabel.update_image<class_RichTextLabel_method_update_image>`.
+  Note that the key is always interpreted as a String.
+  For example with ``[img key=123]res://Icon.svg[/img]``:
+  
+.. code-block:: none
+
+  RichTextLabel.update_image("123", RichTextLabel.UPDATE_COLOR, null, 0, 0, Color(1.0, 0.2, 1.0, 0.4)) # This works
+  RichTextLabel.update_image(123, RichTextLabel.UPDATE_COLOR, null, 0, 0, Color(1.0, 0.2, 1.0, 0.4))   # This does not work
+
 .. _doc_bbcode_in_richtextlabel_image_and_table_alignment:
 
 Image and table vertical alignment
